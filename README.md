@@ -1,42 +1,36 @@
 # Cluster_financial_consumer
 
+## Overview:
 One of the first things you might notice here is that this dataset is HUGE — over 20,000 rows and 351 columns!
 
-you can look in the [data dictionary](./file_jupiter/Data_dictionary.ipynb) for this project for details and links to the official [Code Book](https://sda.berkeley.edu/sdaweb/docs/scfcomb2019/DOC/hcbk.htm). For now, let's just say that this dataset tracks all sorts of behaviors relating to the ways households earn, save, and spend money in the United States.
+you can look in the [data dictionary](./file_jupyter/Data_dictionary.ipynb) for this project for details and links to the official [Code Book](https://sda.berkeley.edu/sdaweb/docs/scfcomb2019/DOC/hcbk.htm). For now, let's just say that this dataset tracks all sorts of behaviors relating to the ways households earn, save, and spend money in the United States.
 
 For this project, we're going to focus on households that have "been turned down for credit or feared being denied credit in the past 5 years." These households are identified in the `"TURNFEAR"` column.
 
 ## Reference:
 My Project is built according to the project of [WorldQuant University](https://www.wqu.edu/programs/mscfe/?utm_source=Google&utm_medium=RSA&utm_campaign=SA&utm_term=BKW&utm_content=MScFE+US&gclid=CjwKCAjwitShBhA6EiwAq3RqAwtCSVWtPzQmw6PLHf_jWredw0dRew46J_zkxTPMhGpBeV3D9jcjMhoC0_QQAvD_BwE) which is the great place to learn and dive deep the data science and machine learning
 
-## Requirement:
+## Prerequiste: 
 - Python 3.9
 - Machine Learning: Sklearn and imblearn
 - Analysis: Pandas and Numpy
-- Visualization: Matplotlib.pyplot, Seaborn and plotly.express
-- Packing Model: pickle
+- Visualization: Matplotlib.pyplot, Seaborn, plotly.express and Dash
 
-## Overview:
-The dataset is about bankruptcy prediction of Polish companies. The data was collected from Emerging Markets Information Service, which is a database containing information on emerging markets around the world. The bankrupt companies were analyzed in *the period 2000-2012*, while the still operating companies were evaluated from *2007 to 2013*.
-
-About the attribute information, please refer to [data dictionary.ipynb](https://github.com/Trihamhochoi/Poland-Bankruptcy/blob/main/data_dictionary.ipynb)
 ## Introduction:
-My model is divided into two parts: [EDA](https://github.com/Trihamhochoi/Poland-Bankruptcy/blob/main/EDA.ipynb) and [the classification](https://github.com/Trihamhochoi/Poland-Bankruptcy/blob/main/Classification_Decision_tree.ipynb) by 2 models (Random Forest and Gradient Booster).
+My model is divided into two parts: 
+- [EDA](./file_jupyter/EDA.ipynb) and
+- [unsupervised learning model](./file_jupyter/cluster_with_multiple_features.ipynb) by K means cluster.
 
-Simultaneously, I will compare the performance and running time of  2 models and select the appropriate model.In addition, I will validate the model using the confusion report to tune tune hyperparameters effectively.
 
 ## How to use my code:
 You can use my code to create your personal model as well as improve it more professionally. Such as:
-- If you have data of other countries, you could try to personalize it and predict the results.
+- If you have data of other fields, you could try to personalize it and predict the results.
 - Or you could build a dasboard to visualize some metrics.
 
 ## Machine Learning algorithms:
-- [Decision Tree](https://en.wikipedia.org/wiki/Decision_tree)
-- [Gradient booster](https://en.wikipedia.org/wiki/Gradient_boosting)
+- [K-means cluster](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
+- [PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
 
-**My Conclusion:** 
-In my case, after using cross validation for both algorithsms, I see Random Forest not only saves slightly more time but also gives better score than the other.   
-For this reason, we recommend to use Randomforest for this model.
  
 ## PART1: Exploratory Data Analysis:
 
